@@ -1,2 +1,4 @@
 # MultiLinkedlistDFI
-MLL_DwifiParizI
+MLL_DwifiParizIbrahim
+G1A021092
+Informatika B
