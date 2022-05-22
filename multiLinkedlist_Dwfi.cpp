@@ -1,3 +1,6 @@
+//Dwifi Parizza Ibrahim
+//G1A021092
+
 void add_fn_Node(LIST* list, NODE* pnew_stu) {
 
     NODE* temp = list->fn_head;
@@ -20,7 +23,7 @@ void add_fn_Node(LIST* list, NODE* pnew_stu) {
 
             temp = list->fn_head;
 
-            if ( (strcmp( pnew_stu->first_name, temp->first_name )) <= 0 ) { // Condition for add before the first node
+            if ( (strcmp( pnew_stu->first_name, temp->first_name )) <= 0 ) { // Kondisi untuk penambahan sebelum node ke-1
 
                 pnew_stu->fn_next = temp;
                 pnew_stu->fn_pre = temp->fn_pre;
@@ -36,7 +39,7 @@ void add_fn_Node(LIST* list, NODE* pnew_stu) {
 
             else {
                 
-                 while ( temp->fn_next != NULL ) { // Condition for add middle
+                 while ( temp->fn_next != NULL ) { // Kondisi untuk node tengah
 
                         if ( (strcmp( pnew_stu->first_name, temp->first_name ) >= 0 ) && (strcmp( pnew_stu->first_name, temp->fn_next->first_name) < 0)) {
 
@@ -54,7 +57,7 @@ void add_fn_Node(LIST* list, NODE* pnew_stu) {
 
                     }
 
-                if ( temp->fn_next == NULL ) { // Condition for add to end
+                if ( temp->fn_next == NULL ) { // Kondisi akhir
 
                     temp->fn_next = pnew_stu;
                     pnew_stu->fn_pre = temp;
@@ -94,7 +97,7 @@ void add_ln_Node(LIST* list, NODE* pnew_stu) {
 
             temp = list->ln_head;
 
-            if ( (strcmp( pnew_stu->last_name, temp->last_name )) <= 0 ) { // Condition for add before the first node
+            if ( (strcmp( pnew_stu->last_name, temp->last_name )) <= 0 ) { // Kondisi untuk menambahkan sebelum node pertama
 
                 pnew_stu->ln_next = temp;
                 pnew_stu->ln_pre = temp->ln_pre;
@@ -111,7 +114,7 @@ void add_ln_Node(LIST* list, NODE* pnew_stu) {
             else {
 
 
-                 while ( temp->ln_next != NULL ) { //Condition for add middle
+                 while ( temp->ln_next != NULL ) { //Kondisi untuk tengah
 
                         if ( (strcmp( pnew_stu->last_name, temp->last_name ) >= 0 ) && (strcmp( pnew_stu->last_name, temp->ln_next->last_name) < 0)) {
 
@@ -129,7 +132,7 @@ void add_ln_Node(LIST* list, NODE* pnew_stu) {
 
                     }
 
-                if ( temp->ln_next == NULL ) { // Condition for add to end
+                if ( temp->ln_next == NULL ) { // Kondisi untuk menambahkan diakhir
 
                     temp->ln_next = pnew_stu;
                     pnew_stu->ln_pre = temp;
